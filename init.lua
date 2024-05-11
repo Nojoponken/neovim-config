@@ -13,4 +13,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+local builtin = require("telescope.builtin")
+
+-- Vim commands
 vim.cmd("set number")
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=4")
+vim.cmd("set shiftwidth=4")
+
+-- Vim keybinds
+vim.g.mapleader = " "
+
+vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<C-h>", ":cd $HOMEPATH", {})
