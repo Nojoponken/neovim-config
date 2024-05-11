@@ -30,6 +30,8 @@ vim.cmd("set shiftwidth=0")
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>win", "<cmd>cd $HOMEPATH/Appdata/Local/nvim<cr>", {}) -- Windows get to config
+vim.keymap.set("n", "<C-.>", "<cmd>ToggleTerm<cr>", {})
+vim.keymap.set("t", "<C-.>", "<cmd>ToggleTerm<cr>", {})
 
 -- Plugin keybinds
 vim.keymap.set("n", "<leader>g", "<cmd>Neogit<cr>", {})
